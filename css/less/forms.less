@@ -96,7 +96,7 @@
     display: block;
     width: 100%;
 }
-.mx-frm-select, .mx-frm-select-color, .mx-frm-select-model {
+.mx-frm-select, .mx-frm-select-color, .mx-frm-select-model, .mx-frm-select-time {
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -122,6 +122,40 @@
             position: absolute;
         }
 	}
+}
+.mx-frm-select-time {
+    label, .mx-lbl-title {
+        height: 29px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #E5E5E5;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 400;
+        color: var(--clr-base);
+        transition: all ease 0.2s;
+        cursor: pointer;
+    }
+    input {
+        &:checked {
+            &~label, &~.mx-lbl-title {
+                border-color: #83EABC;
+                background-color: #83EABC;
+                color: var(--clr-base);
+            }
+        }
+        &[disabled] {
+            &~label, &~.mx-lbl-title {
+                pointer-events: none;
+                border-color: #fff;
+                background-color: #fff;
+                color: var(--clr-base);
+            }
+        }
+    }
 }
 .mx-frm-select {
     label {

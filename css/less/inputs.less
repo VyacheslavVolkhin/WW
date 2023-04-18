@@ -104,6 +104,13 @@ select.mx-form-input:required:invalid {
             color: #fff !important;
         }
     }
+    &.mx-button-third {
+        &:not(:hover) {
+            background: linear-gradient(90deg, #FF416C 0%, #FC927B 100%);
+            box-shadow: 0px 20px 50px rgba(131, 234, 188, 0.15);
+            border-radius: 10px;
+        }
+    }
     &.mx-button-border {
         &:not(:hover) {
             background-color: transparent;
@@ -214,10 +221,16 @@ select.mx-form-input:required:invalid {
     &.mx-ico-arrow {
         z-index: 20;
         cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 1.6rem;
+        background-color: #F9F9F9;
         &:before {
-            background-image: url(../img/icons/arrow-slider.png);
+            background-image: url(../img/icons/arrow-slider.svg);
+            background-size: 24px auto;
         }
         &:hover {
+            background-color: #F9F9F9 - #111;
         }
     }
     &.mx-ico-arrow-prev {
