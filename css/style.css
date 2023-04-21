@@ -865,7 +865,7 @@ body.mx-popup-open {
   position: absolute;
   top: 40px;
   right: 20px;
-  z-index: 2;
+  z-index: 40;
   width: 24px;
   height: 24px;
 }
@@ -878,7 +878,7 @@ body.mx-popup-open {
   width: 24px;
   height: 24px;
   padding: 0;
-  z-index: 5;
+  z-index: 40;
 }
 .mx-popup-box .mx-btn-action-back .button-title {
   display: none;
@@ -1202,9 +1202,10 @@ body.mx-popup-open {
       flex-shrink: 0;
   margin-right: 8px;
 }
-.mx-card-box .mx-price-wrap .mx-elm-stock {
+.mx-card-box .mx-price-wrap .mx-stock-wrap {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  width: 100%;
   margin-right: 8px;
 }
 .mx-card-box .mx-h1-title {
@@ -1448,7 +1449,7 @@ body.mx-popup-open {
   display: block;
 }
 .mx-catalog-actions-box .mx-frm-select-wrap .mx-popup-content {
-  border-radius: 0 0 16px 16px;
+  border-radius: 16px;
   white-space: nowrap;
 }
 .mx-catalog-actions-box .mx-buttons-wrap {
@@ -1615,6 +1616,9 @@ body.mx-popup-open {
 }
 .mx-top-box .broad ul {
   margin: 0;
+}
+.mx-top-box .mx-img-bg-cover {
+  object-position: right center;
 }
 @media (max-width: 1199px) {
   .mx-slider-box .mx-product-page {
@@ -1817,6 +1821,37 @@ body.mx-popup-open {
     width: 88px;
     margin: 0;
   }
+  .mx-popup-step-box {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 133px;
+  }
+  .mx-popup-step-box::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .mx-popup-step-box .mx-popup-content-wrap {
+    overflow: hidden;
+    -ms-flex: inherit;
+        flex: inherit;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .mx-popup-step-box .mx-popup-footer-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    height: 101px;
+    z-index: 30;
+  }
 }
 @media (max-width: 639px) {
   .mx-catalog-box .slick-list {
@@ -1970,7 +2005,9 @@ body.mx-popup-open {
   .mx-card-box .mx-price-wrap {
     position: relative;
   }
-  .mx-card-box .mx-price-wrap .mx-elm-stock {
+  .mx-card-box .mx-price-wrap .mx-stock-wrap {
+    width: auto;
+    display: inline-block;
     position: absolute;
     top: 50%;
     right: 8px;
@@ -2160,7 +2197,7 @@ body.mx-popup-open {
     margin-right: -10px;
     margin-bottom: 25px;
   }
-  .mx-card-box .mx-price-wrap .mx-elm-stock {
+  .mx-card-box .mx-price-wrap .mx-stock-wrap {
     top: -8px;
     margin-top: 0;
     right: 0;
@@ -2373,7 +2410,7 @@ body.mx-popup-open {
   .mx-card-box .mx-price-wrap .mx-elm-price {
     font-size: 28px;
   }
-  .mx-card-box .mx-price-wrap .mx-elm-stock {
+  .mx-card-box .mx-price-wrap .mx-stock-wrap {
     position: static;
     margin: 0 10px 0 24px;
   }
