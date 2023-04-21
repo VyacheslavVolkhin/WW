@@ -1594,6 +1594,8 @@ body.mx-popup-open {
   padding: 40px 0;
   min-height: 340px;
   margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
 }
 .mx-top-box:before {
   content: "";
@@ -1618,7 +1620,14 @@ body.mx-popup-open {
   margin: 0;
 }
 .mx-top-box .mx-img-bg-cover {
-  object-position: right center;
+  object-position: center bottom;
+}
+.mx-top-box .mx-photo-inner-wrap {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 @media (max-width: 1199px) {
   .mx-slider-box .mx-product-page {
@@ -1870,6 +1879,9 @@ body.mx-popup-open {
   }
 }
 @media (max-width: 424px) {
+  .mx-top-box .mx-photo-inner-wrap {
+    left: -140px;
+  }
   .mx-form-box .mx-info-inner-wrap {
     margin-top: 0;
     padding-top: 25px;
