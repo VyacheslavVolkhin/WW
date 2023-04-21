@@ -268,3 +268,8 @@ $(window).on('load', function () {
     
     
 });
+$(window).on('resize', function () {
+    if ($(window).innerWidth() < 1024) {
+        $('.mx-zoom').trigger('zoom.destroy');
+    }
+});
