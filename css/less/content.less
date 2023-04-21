@@ -1038,6 +1038,13 @@ body.mx-popup-open {
         }
     }
     .mx-catalog-box {
+        &.mx-grid-second {
+            .mx-item-wrap {
+                &:nth-child(3n+1) {
+                    width: 100%;
+                }
+            }
+        }
         &.mx-catalog-row {
             .mx-item-wrap {
                 &:nth-child(3) {
@@ -1299,6 +1306,23 @@ body.mx-popup-open {
 }
 @media (max-width: 639px) {
     .mx-catalog-box {
+        &.mx-grid-second {
+            .mx-item-wrap {
+                width: 50%;
+                &:nth-child(3n+1) {
+                    width: 100%;
+                }
+            }
+            .mx-item-tile-catalog {
+                .mx-tile-photo {
+                    height: auto;
+                    min-height: 240px;
+                    &:before {
+                        padding-top: 122%;
+                    }
+                }
+            }
+        }
         .slick-list {
             overflow: visible;
         }
@@ -1336,6 +1360,59 @@ body.mx-popup-open {
         }
     }
     .mx-catalog-box {
+        &.mx-grid-second {
+            .mx-item-wrap {
+                width: 50%;
+                &:nth-child(3n+1) {
+                    width: 100%;
+                }
+                &:not(:nth-child(3n+1)) {
+                    .mx-item-tile-catalog {
+                        .mx-tile-photo {
+                            min-height: 200px;
+                        }
+                        .mx-tile-info-wrap {
+                            padding: 8px;
+                        }
+                        .mx-tile-title {
+                            font-size: 12px;
+                            line-height: 1.3;
+                            margin-bottom: 8px;
+                        }
+                        .mx-tile-price {
+                            font-size: 12px;
+                            line-height: 1.3;
+                        }
+                        .mx-tile-actions-wrap {
+                            top: 8px;
+                            right: 8px;
+                            width: 24px;
+                        }
+                        .mx-tile-ico {
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .mx-tile-sticker {
+                            height: 18px;
+                            line-height: 18px;
+                            font-size: 12px;
+                        }
+                        .mx-tile-stickers-wrap {
+                            padding-top: 8px;
+                        }
+                    }
+                }
+            }
+            .mx-item-tile-catalog {
+                .mx-tile-photo {
+                    height: auto;
+                    min-height: 240px;
+                    &:before {
+                        padding-top: 133%;
+                    }
+                }
+            }
+        }
         .mx-slider {
             .mx-item-tile-catalog {
                 width: 250px;
@@ -1546,15 +1623,7 @@ body.mx-popup-open {
     }
 }
 @media (min-width: 640px) and (max-width: 1199px) {
-    .mx-catalog-box {
-        &.mx-grid-second {
-            .mx-item-wrap {
-                &:nth-child(3n+1) {
-                    width: 100%;
-                }
-            }
-        }
-    }
+    
 }
 @media (min-width: 768px) {
     .mx-photos-slider-box .mx-elm-photo:before {

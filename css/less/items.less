@@ -101,7 +101,10 @@
         flex-shrink: 0;
         margin-bottom: 4px;
         position: relative;
-        pointer-events: none;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
         &.mx-tile-ico-close {
             pointer-events: inherit;
             cursor: pointer;
